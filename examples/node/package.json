@@ -1,0 +1,8 @@
+{
+  "name": "jabee-examples-node",
+  "private": true,
+  "type": "module",
+  "description": "Runnable Jabee API examples. No dependencies.",
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test ." }
+}

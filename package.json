@@ -28,6 +28,7 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "vitest run",
+    "test:examples": "node --test examples/node/*.test.mjs && python3 -m unittest discover -s examples/python -p 'test_*.py'",
     "start": "node dist/server.js",
     "prepublishOnly": "npm run typecheck && npm test && npm run build"
   },

@@ -232,6 +232,16 @@ relationship.
 signature verification in Node and Python if you would rather use a
 webhook than an agent.
 
+## Without MCP
+
+If your agent does not speak MCP — or you are calling from cron, CI or a
+web handler rather than from an agent — the same four jobs are a plain HTTP
+call. [`examples/`](examples/) has them in Node and in Python, with no SDK
+and no dependencies: send an alert, ask and wait for an answer, check in a
+scheduled job so silence raises the alarm, and receive the answer by signed
+webhook. Both sets have tests that run against a stub, so you can check them
+without a key.
+
 ## About this repository
 
 This repository is the published source of **`@jabee/mcp` 0.1.3** — the
