@@ -1,0 +1,57 @@
+{
+  "name": "@jabee/mcp",
+  "version": "0.1.3",
+  "description": "Your AI agent messages you on WhatsApp when a job finishes — and asks you before it does anything you'd want a say in.",
+  "license": "MIT",
+  "homepage": "https://jabee.ai/docs/mcp/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MumenTayyem/jabee-whatsapp-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MumenTayyem/jabee-whatsapp-mcp/issues"
+  },
+  "mcpName": "ai.jabee/mcp",
+  "type": "module",
+  "bin": {
+    "mcp": "dist/server.js",
+    "jabee-mcp": "dist/server.js",
+    "jabee-channel": "dist/channel.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "start": "node dist/server.js",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "agent-notifications",
+    "whatsapp-notifications",
+    "mcp",
+    "modelcontextprotocol",
+    "whatsapp",
+    "human-in-the-loop",
+    "approvals",
+    "claude-code",
+    "alerts"
+  ]
+}
